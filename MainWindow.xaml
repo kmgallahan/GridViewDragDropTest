@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+  x:Class="GridViewDragDropTest.MainWindow"
+  xmlns:local="using:GridViewDragDropTest"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+  <GridView
+    AllowDrop="True"
+    CanDragItems="True"
+    CanReorderItems="True"
+    ItemsSource="{x:Bind Photos}">
+    <GridView.ItemTemplate>
+      <DataTemplate x:DataType="local:Photo">
+        <Image
+          Width="100"
+          Height="100"
+          Source="{x:Bind Path}" />
+      </DataTemplate>
+    </GridView.ItemTemplate>
+    <GridView.ItemsPanel>
+      <ItemsPanelTemplate>
+        <ItemsWrapGrid MaximumRowsOrColumns="3" Orientation="Horizontal" />
+      </ItemsPanelTemplate>
+    </GridView.ItemsPanel>
+  </GridView>
+</Window>

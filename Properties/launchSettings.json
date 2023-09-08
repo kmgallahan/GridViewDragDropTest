@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "GridViewDragDropTest (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": true
+    },
+    "GridViewDragDropTest (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
